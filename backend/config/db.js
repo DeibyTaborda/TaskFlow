@@ -1,4 +1,4 @@
-const hola = require('dotenv').config();
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(
@@ -17,3 +17,5 @@ try {
 } catch (e) {
     console.error("Error connecting to the database", e);
 }
+
+module.exports = sequelize;
